@@ -155,10 +155,6 @@ void redrawText(HWND hwnd, HDC hdc, PAINTSTRUCT ps, DRAWABLETEXT* dText)
     {
         LOOut(hdc, ps, *(dText->op), *(dText->text));
     }
-    else if (dText->OutMode == CLOSED)
-    {
-        printf("%s\n", "file hase been closed");
-    }
     dText->clearCArea = FALSE;
 }
 
@@ -199,10 +195,6 @@ void hScroll(HWND hwnd, WPARAM wParam, DRAWABLETEXT* dText)
     if (dText->OutMode == HSMODE)
     {
         HSScrollH(hwnd, wParam, dText->op);
-    }
-    else if (dText->OutMode == LOMODE)
-    {
-
     }
 }
 
