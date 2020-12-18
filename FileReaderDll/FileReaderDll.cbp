@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FileReaderDll" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../FileReaderApp/bin/Debug/FileReaderDll" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+					<Add library="Gdi32" />
+					<Add library="Comdlg32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/FileReaderDll" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="Manager/OutManager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Manager/OutManager.h" />
+		<Unit filename="Modes/HScroll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Modes/HScroll.h" />
+		<Unit filename="Modes/Layout.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Modes/Layout.h" />
+		<Unit filename="OutParams/OutParams.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="OutParams/OutParams.h" />
+		<Unit filename="ReaderMenu/ReaderMenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ReaderMenu/ReaderMenu.h" />
+		<Unit filename="Res/ReaderMenu.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="Scroll/Scroll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Scroll/Scroll.h" />
+		<Unit filename="Text/Text.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Text/Text.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

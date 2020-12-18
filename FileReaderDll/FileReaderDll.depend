@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\hscroll.c
+	"HScroll.h"
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\hscroll.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\text\text.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\outparams\outparams.h
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\scroll\scroll.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"../OutParams/OutParams.h"
+
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\layout.c
+	"Layout.h"
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\layout.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\manager\outmanager.c
+	"OutManager.h"
+
+1608253869 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\manager\outmanager.h
+	<stdlib.h>
+	"../Modes/HScroll.h"
+	"../Modes/Layout.h"
+	"../ReaderMenu/ReaderMenu.h"
+
+1608258000 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\readermenu\readermenu.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\outparams\outparams.c
+	"OutParams.h"
+
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\readermenu\readermenu.c
+	"ReaderMenu.h"
+
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\res\readermenu.rc
+	"../ReaderMenu/ReaderMenu.h"
+
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\scroll\scroll.c
+	"Scroll.h"
+
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\text\text.c
+	"Text.h"
+
+1608256024 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\main.c
+	"Manager/OutManager.h"
+

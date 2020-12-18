@@ -1,0 +1,11 @@
+EXPORTS
+    CreateDText @1
+    DllMain @2
+    closeText @3
+    fillDText @4
+    hScroll @5
+    openNewFile @6
+    precChengeMode @7
+    redrawText @8
+    sizeChanged @9
+    vScroll @10

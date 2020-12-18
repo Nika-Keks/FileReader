@@ -1,0 +1,180 @@
+# depslib dependency file v1.0
+1606530369 source:c:\users\acer\desktop\filereader\main.c
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	"Manager/OutManager.h"
+	"ReaderMenu/ReaderMenu.h"
+	"ReaderMenu/ReaderMenu.h"
+
+1606524778 c:\users\acer\desktop\filereader\manager\outmanager.h
+	<stdlib.h>
+	"../Modes/HScroll.h"
+	"../Modes/Layout.h"
+	"../ReaderMenu/ReaderMenu.h"
+
+1605044781 c:\users\acer\desktop\filereader\modes\hscroll.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1606525399 c:\users\acer\desktop\filereader\text\text.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+
+1606524595 c:\users\acer\desktop\filereader\outparams\outparams.h
+
+1605044681 c:\users\acer\desktop\filereader\scroll\scroll.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"../OutParams/OutParams.h"
+
+1605120667 c:\users\acer\desktop\filereader\modes\layout.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1606514144 c:\users\acer\desktop\filereader\readermenu\readermenu.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+
+1606237994 source:c:\users\acer\desktop\filereader\manager\outmanager.c
+	"OutManager.h"
+
+1606531518 source:c:\users\acer\desktop\filereader\modes\hscroll.c
+	"HScroll.h"
+
+1606530281 source:c:\users\acer\desktop\filereader\modes\layout.c
+	"Layout.h"
+
+1606524593 source:c:\users\acer\desktop\filereader\outparams\outparams.c
+	"OutParams.h"
+
+1606523275 source:c:\users\acer\desktop\filereader\readermenu\readermenu.c
+	"ReaderMenu.h"
+
+1606524825 source:c:\users\acer\desktop\filereader\scroll\scroll.c
+	"Scroll.h"
+
+1606525399 source:c:\users\acer\desktop\filereader\text\text.c
+	"Text.h"
+
+1605357649 source:c:\users\acer\desktop\filereader\res\readermenu.rc
+	"../ReaderMenu/ReaderMenu.h"
+
+1606530369 source:c:\users\acer\desktop\filereader__text\main.c
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	"Manager/OutManager.h"
+	"ReaderMenu/ReaderMenu.h"
+	"ReaderMenu/ReaderMenu.h"
+
+1606524778 c:\users\acer\desktop\filereader__text\manager\outmanager.h
+	<stdlib.h>
+	"../Modes/HScroll.h"
+	"../Modes/Layout.h"
+	"../ReaderMenu/ReaderMenu.h"
+
+1605044781 c:\users\acer\desktop\filereader__text\modes\hscroll.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1606525399 c:\users\acer\desktop\filereader__text\text\text.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+
+1606524595 c:\users\acer\desktop\filereader__text\outparams\outparams.h
+
+1605044681 c:\users\acer\desktop\filereader__text\scroll\scroll.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"../OutParams/OutParams.h"
+
+1605120667 c:\users\acer\desktop\filereader__text\modes\layout.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1606514144 c:\users\acer\desktop\filereader__text\readermenu\readermenu.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+
+1606531557 source:c:\users\acer\desktop\filereader__text\manager\outmanager.c
+	"OutManager.h"
+
+1606531518 source:c:\users\acer\desktop\filereader__text\modes\hscroll.c
+	"HScroll.h"
+
+1606530281 source:c:\users\acer\desktop\filereader__text\modes\layout.c
+	"Layout.h"
+
+1606524593 source:c:\users\acer\desktop\filereader__text\outparams\outparams.c
+	"OutParams.h"
+
+1606523275 source:c:\users\acer\desktop\filereader__text\readermenu\readermenu.c
+	"ReaderMenu.h"
+
+1605357649 source:c:\users\acer\desktop\filereader__text\res\readermenu.rc
+	"../ReaderMenu/ReaderMenu.h"
+
+1606524825 source:c:\users\acer\desktop\filereader__text\scroll\scroll.c
+	"Scroll.h"
+
+1606525399 source:c:\users\acer\desktop\filereader__text\text\text.c
+	"Text.h"
+
+1608257549 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderapp\main.c
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<Manager/OutManager.h>
+	<ReaderMenu/ReaderMenu.h>
+
+1608253869 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\manager\outmanager.h
+	<stdlib.h>
+	"../Modes/HScroll.h"
+	"../Modes/Layout.h"
+	"../ReaderMenu/ReaderMenu.h"
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\hscroll.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\text\text.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\outparams\outparams.h
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\scroll\scroll.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"../OutParams/OutParams.h"
+
+1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\layout.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1608258213 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\readermenu\readermenu.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+
