@@ -12,7 +12,7 @@
 //#include "ReaderMenu/ReaderMenu.h"
 
 #include <Manager/OutManager.h>
-#include <ReaderMenu/ReaderMenu.h>
+#include "../Res/ReaderMenu.h"
 
 
 /*  Declare Windows procedure  */

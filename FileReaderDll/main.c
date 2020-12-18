@@ -1,7 +1,7 @@
 #include "Manager/OutManager.h"
 
 
-extern  DLL_EXPORT BOOL APIENTRY DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
+DLL_EXPORT BOOL APIENTRY DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
 {
     switch (fdwReason)
     {

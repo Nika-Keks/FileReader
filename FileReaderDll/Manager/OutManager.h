@@ -8,11 +8,13 @@
 #endif
 
 
-
+#include <tchar.h>
+#include <windows.h>
+#include <stdio.h>
 #include<stdlib.h>
 #include "../Modes/HScroll.h"
 #include "../Modes/Layout.h"
-#include "../ReaderMenu/ReaderMenu.h"
+#include "../../Res/ReaderMenu.h"
 
 #define CLOSED 1
 #define HSMODE 2

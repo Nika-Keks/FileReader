@@ -17,7 +17,7 @@
 					<Add directory="../FileReaderDll" />
 				</Compiler>
 				<Linker>
-					<Add library="../FileReaderDll/bin/Debug/libFileReaderDll.a" />
+					<Add library="bin/Debug/libFileReaderDll.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -43,7 +43,7 @@
 			<Add library="comctl32" />
 			<Add library="ComDlg32" />
 		</Linker>
-		<Unit filename="../FileReaderDll/Res/ReaderMenu.rc">
+		<Unit filename="../Res/ReaderMenu.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="main.c">

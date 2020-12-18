@@ -42,6 +42,10 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Unit filename="../Res/ReaderMenu.h" />
+		<Unit filename="../Res/ReaderMenu.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Unit filename="Manager/OutManager.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -58,13 +62,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="OutParams/OutParams.h" />
-		<Unit filename="ReaderMenu/ReaderMenu.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="ReaderMenu/ReaderMenu.h" />
-		<Unit filename="Res/ReaderMenu.rc">
-			<Option compilerVar="WINDRES" />
-		</Unit>
 		<Unit filename="Scroll/Scroll.c">
 			<Option compilerVar="CC" />
 		</Unit>

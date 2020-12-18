@@ -135,18 +135,21 @@
 1606525399 source:c:\users\acer\desktop\filereader__text\text\text.c
 	"Text.h"
 
-1608257549 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderapp\main.c
+1608283591 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderapp\main.c
 	<tchar.h>
 	<windows.h>
 	<stdio.h>
 	<Manager/OutManager.h>
-	<ReaderMenu/ReaderMenu.h>
+	"../Res/ReaderMenu.h"
 
-1608253869 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\manager\outmanager.h
+1608283325 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\manager\outmanager.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
 	<stdlib.h>
 	"../Modes/HScroll.h"
 	"../Modes/Layout.h"
-	"../ReaderMenu/ReaderMenu.h"
+	"../../Res/ReaderMenu.h"
 
 1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\hscroll.h
 	"../Text/Text.h"
@@ -168,13 +171,18 @@
 	<stdlib.h>
 	"../OutParams/OutParams.h"
 
-1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\layout.h
+1608283527 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\layout.h
 	"../Text/Text.h"
 	"../OutParams/OutParams.h"
 	"../Scroll/Scroll.h"
 
-1608258213 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\readermenu\readermenu.h
-	<tchar.h>
-	<windows.h>
-	<stdio.h>
+1608260400 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\readermenu\readermenu.h
+
+1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\res\readermenu.rc
+	"../ReaderMenu/ReaderMenu.h"
+
+1608283563 source:c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.rc
+	"ReaderMenu.h"
+
+1608260710 c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.h
 
