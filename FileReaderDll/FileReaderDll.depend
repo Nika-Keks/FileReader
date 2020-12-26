@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\hscroll.c
+1608921270 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\hscroll.c
 	"HScroll.h"
 
 1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\modes\hscroll.h
@@ -15,7 +15,7 @@
 
 1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\outparams\outparams.h
 
-1608251788 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\scroll\scroll.h
+1608938173 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\scroll\scroll.h
 	<tchar.h>
 	<windows.h>
 	<stdio.h>
@@ -30,7 +30,7 @@
 	"../OutParams/OutParams.h"
 	"../Scroll/Scroll.h"
 
-1608260420 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\manager\outmanager.c
+1608921100 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\manager\outmanager.c
 	"OutManager.h"
 
 1608283325 c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\manager\outmanager.h
@@ -53,17 +53,17 @@
 1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\res\readermenu.rc
 	"../ReaderMenu/ReaderMenu.h"
 
-1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\scroll\scroll.c
+1608921592 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\scroll\scroll.c
 	"Scroll.h"
 
 1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\text\text.c
 	"Text.h"
 
-1608256024 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\main.c
+1608900656 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\main.c
 	"Manager/OutManager.h"
 
-1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.rc
-	"../ReaderMenu/ReaderMenu.h"
+1608900922 source:c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.rc
+	"ReaderMenu.h"
 
-1608260710 c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.h
+1608900808 c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.h
 

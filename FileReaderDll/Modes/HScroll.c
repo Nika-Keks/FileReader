@@ -154,4 +154,3 @@ void HSSetScrollParam(HWND hwnd, OUTPARAM op)
     else
         EnableScrollBar(hwnd, SB_HORZ, ESB_ENABLE_BOTH);
 }
-

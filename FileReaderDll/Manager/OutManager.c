@@ -19,7 +19,7 @@ WINBOOL getNewFileName(HWND hwnd, PSTR OFNBuffer, int sizeOFNBuf)
     ofn.lStructSize = sizeof(ofn);
     ofn.hwndOwner = hwnd;
     ofn.hInstance = NULL;
-    ofn.lpstrFilter = "Text\0*.TXT\0";
+    ofn.lpstrFilter = "All Files\0*.TXT;*.C;*.H;*.CPP\0";
     ofn.lpstrCustomFilter = NULL;
     ofn.nMaxCustFilter = 0;
     ofn.nFilterIndex = 0;

@@ -28,7 +28,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 {
     HWND hwnd;               /* This is the handle for our window */
     MSG messages;            /* Here messages to the application are saved */
-    WNDCLASSEX wincl;        /* Data structure for the windowclass */
+    WNDCLASSEX wincl;        /* Data structure for the window class */
 
     /* The Window structure */
     wincl.hInstance = hThisInstance;
@@ -139,9 +139,16 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                 vScroll(hwnd, SB_LINEDOWN, dText);
                 break;
 
+            case VK_PRIOR:
+                vScroll(hwnd, SB_PAGEUP, dText);
+                break;
+
+            case VK_NEXT:
+                vScroll(hwnd, SB_PAGEDOWN, dText);
+                break;
+
             case VK_F3:
                 precChengeMode(hwnd, dText);
-                InvalidateRect(hwnd, NULL, FALSE);
                 break;
             }
             break;
@@ -158,7 +165,17 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             case IDM_EXIT:
                 SendMessage(hwnd, WM_CLOSE, 0, 0L);
                 break;
+            case IDM_CHANDEMO:
+                precChengeMode(hwnd, dText);
+                break;
             }
+            break;
+
+        case WM_MOUSEWHEEL:
+            if (GET_WHEEL_DELTA_WPARAM(wParam) < 0)
+                vScroll(hwnd, SB_LINEDOWN, dText);
+            else if(GET_WHEEL_DELTA_WPARAM(wParam) > 0)
+                vScroll(hwnd, SB_LINEUP, dText);
             break;
 
         case WM_DESTROY:

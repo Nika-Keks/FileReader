@@ -135,7 +135,7 @@
 1606525399 source:c:\users\acer\desktop\filereader__text\text\text.c
 	"Text.h"
 
-1608283591 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderapp\main.c
+1608932430 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderapp\main.c
 	<tchar.h>
 	<windows.h>
 	<stdio.h>
@@ -181,8 +181,8 @@
 1608251788 source:c:\users\acer\desktop\documents\fr\filereaderproject\filereaderdll\res\readermenu.rc
 	"../ReaderMenu/ReaderMenu.h"
 
-1608283563 source:c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.rc
+1608900922 source:c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.rc
 	"ReaderMenu.h"
 
-1608260710 c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.h
+1608900808 c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.h
 

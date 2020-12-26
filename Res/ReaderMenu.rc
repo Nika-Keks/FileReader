@@ -6,8 +6,9 @@ IDM_MENU MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "&Open...", IDM_OPEN
-        MENUITEM "&Close",   IDM_CLOSE
-        MENUITEM "E&xit",    IDM_EXIT
+        MENUITEM "&Open...",        IDM_OPEN
+        MENUITEM "&Close",          IDM_CLOSE
+        MENUITEM "E&xit",           IDM_EXIT
+        MENUITEM "Change &Mode Out",IDM_CHANDEMO
     END
 END

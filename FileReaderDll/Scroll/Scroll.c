@@ -28,8 +28,8 @@ void ChangScrollPos(WPARAM wParam, SCROLLINFO* si)
     case SB_PAGEDOWN :
         si->nPos += si->nPage;
         break;
-    case SB_THUMBPOSITION :
-        si->nPos = si->nTrackPos;;
+    case SB_THUMBTRACK :
+        si->nPos = si->nTrackPos;
         break;
     default :
         break;

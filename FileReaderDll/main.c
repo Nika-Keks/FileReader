@@ -22,5 +22,5 @@ DLL_EXPORT BOOL APIENTRY DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpv
             // detach from thread
             break;
     }
-    return TRUE; // succesful
+    return TRUE; // succesfuly
 }
