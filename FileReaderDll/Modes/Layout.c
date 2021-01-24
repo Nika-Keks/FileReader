@@ -4,7 +4,7 @@
     input
     TEXT text
     OUTPARAM op
-    int lineOfset - number of lines to retreat
+    int lineOffset - number of lines to retreat
 
     output
     int* iStr - index of the new current line
@@ -14,18 +14,18 @@
     a new substring with the bark will start rendering,
     provided that the new line is closer to the end of the text than the current one
 */
-STR stepToEnd(TEXT text, OUTPARAM op, int lineOfset, int* iStr)
+STR stepToEnd(TEXT text, OUTPARAM op, int lineOffset, int* iStr)
 {
     *iStr = op.iCurStr;
     STR substr = op.curSubStr;
-    for (int i = 0; i < lineOfset; i++)
+    for (int i = 0; i < lineOffset; i++)
     {
         if (lenSubstr(text, *iStr, substr) >= nSymInLine(op))
             substr += nSymInLine(op);
         else
         {
             *iStr += 1;
-            if (*iStr >= text.NStr)
+            if ((*iStr) >= text.NStr)
                 return NULL;
             substr = text.strings[*iStr];
         }
@@ -37,7 +37,7 @@ STR stepToEnd(TEXT text, OUTPARAM op, int lineOfset, int* iStr)
     input
     TEXT text
     OUTPARAM op
-    int lineOfset - number of lines to retreat
+    int lineOffset - number of lines to retreat
 
     output
     int* iStr - index of the new current line
@@ -47,11 +47,11 @@ STR stepToEnd(TEXT text, OUTPARAM op, int lineOfset, int* iStr)
     a new substring with the bark will start rendering,
     provided that the new line is closer to the beginning of the text than the current one
 */
-STR stepToBegin(TEXT text, OUTPARAM op, int lineOfset, int* iStr)
+STR stepToBegin(TEXT text, OUTPARAM op, int lineOffset, int* iStr)
 {
     *iStr = op.iCurStr;
     STR substr = op.curSubStr;
-    for (int i = 0; i > lineOfset; i--)
+    for (int i = 0; i > lineOffset; i--)
     {
         if (lenStr(text, *iStr) - lenSubstr(text, *iStr, substr) >= nSymInLine(op))
             substr -= nSymInLine(op);
@@ -72,7 +72,7 @@ STR stepToBegin(TEXT text, OUTPARAM op, int lineOfset, int* iStr)
     input
     TEXT text
     OUTPARAM op
-    int lineOfset - number of lines to retreat
+    int lineOffset - number of lines to retreat
 
     output
     int* iStr - index of the new current line
@@ -80,14 +80,14 @@ STR stepToBegin(TEXT text, OUTPARAM op, int lineOfset, int* iStr)
 
     the function is combination of stepToEnd(...) and stepToBegin(...)
  */
-STR stepBackN(TEXT text, OUTPARAM op, int lineOfset, int* newIStr)
+STR stepBackN(TEXT text, OUTPARAM op, int lineOffset, int* newIStr)
 {
     STR newSubstr = op.curSubStr;
     *newIStr = op.iCurStr;
-    if (lineOfset > 0)
-        newSubstr = stepToEnd(text, op, lineOfset, newIStr);
-    else if (lineOfset < 0)
-        newSubstr = stepToBegin(text, op, lineOfset, newIStr);
+    if (lineOffset > 0)
+        newSubstr = stepToEnd(text, op, lineOffset, newIStr);
+    else if (lineOffset < 0)
+        newSubstr = stepToBegin(text, op, lineOffset, newIStr);
 
     return newSubstr;
 }
@@ -116,19 +116,21 @@ void LOProcChangeWSize(LPARAM lParam, OUTPARAM* op, TEXT* text)
     }
 
     int iStr;
-    STR newSubstr;
     if (op->nLines <= nLineOnPage(*op))
     {
         op->curSubStr = text->strings[0];
         op->iCurStr = 0;
     }
-    else if (stepBackN(*text, *op, nLineOnPage(*op) - 1, &iStr) == NULL &&
-        (newSubstr=stepBackN(*text, *op, -1, &iStr)) != NULL)
+    else if (stepBackN(*text, *op, nLineOnPage(*op), &iStr) == NULL)
     {
-        op->curSubStr = newSubstr;
+        STR lastStr = text->strings[text->NStr - 1];
+        op->curSubStr = lastStr + (lenStr(*text, text->NStr - 1) / op->nColums) * op->nColums;
+        op->iCurStr = text->NStr - 1;
+        op->curSubStr = stepBackN(*text, *op, -(int)nLineOnPage(*op) + 1, &iStr);
         op->iCurStr = iStr;
     }
 }
+
 
 /*
     input
@@ -145,6 +147,7 @@ void LOProcChangeMode(OUTPARAM* op, TEXT* text)
     op->nLines = getNLines(*text, op->nColums);
     op->curSubStr = text->strings[op->iCurStr];
 }
+
 
 /*
     input
@@ -188,6 +191,7 @@ void LOOut(HDC hdc, PAINTSTRUCT ps, OUTPARAM op, TEXT text)
     }
 }
 
+
 /*
     input
     HWND hwnd
@@ -219,6 +223,7 @@ void LOScrollV(HWND hwnd, WPARAM wParam, OUTPARAM *op, TEXT* text)
     }
 }
 
+
 /*
     input
     HWND hwnd
@@ -236,8 +241,8 @@ void LOSetScrollParam(HWND hwnd, OUTPARAM op, TEXT text)
     si.nMin = 0;
     si.nPage = nLineOnPage(op);
     si.nMax = max((op.nLines - 1), si.nPage);
-    int nLBefor = nLinesBefor(text, nSymInLine(op), op.curSubStr);
-    si.nPos = nLBefor;
+    si.nPos = (int)nLinesBefor(text, op.nColums, op.curSubStr);
+
     SetScrollInfo(hwnd, SB_VERT, &si, TRUE);
 
     EnableScrollBar(hwnd, SB_HORZ, ESB_DISABLE_BOTH);

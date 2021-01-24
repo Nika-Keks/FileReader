@@ -77,6 +77,7 @@ unsigned int lenSubstr(TEXT text, int iStr, char* substr_)
     return lenStr(text, iStr) - (substr_ - text.strings[iStr]);
 }
 
+
 /*
     input
     TEXT text - structure storing the text
@@ -112,7 +113,7 @@ unsigned int nLinesBefor(TEXT text, int nSymInLine, STR substr)
 
     for (int i = 0; i < text.NStr; i++)
     {
-        if (text.strings[i + 1] > substr)
+        if (i < text.NStr && text.strings[i + 1] > substr)
         {
             NLine += (substr - text.strings[i]) / nSymInLine;
             NLine += (substr - text.strings[i]) % nSymInLine == 0 ? 0 : 1;

@@ -186,3 +186,46 @@
 
 1608900808 c:\users\acer\desktop\documents\fr\filereaderproject\res\readermenu.h
 
+1611484928 source:c:\users\acer\desktop\fr\filereaderapp\main.c
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<Manager/OutManager.h>
+	"../Res/ReaderMenu.h"
+
+1611484928 c:\users\acer\desktop\fr\filereaderdll\manager\outmanager.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"../Modes/HScroll.h"
+	"../Modes/Layout.h"
+	"../../Res/ReaderMenu.h"
+
+1611484928 c:\users\acer\desktop\fr\filereaderdll\modes\hscroll.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1611484929 c:\users\acer\desktop\fr\filereaderdll\text\text.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+
+1611484928 c:\users\acer\desktop\fr\filereaderdll\outparams\outparams.h
+
+1611484928 c:\users\acer\desktop\fr\filereaderdll\scroll\scroll.h
+	<tchar.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	"../OutParams/OutParams.h"
+
+1611484928 c:\users\acer\desktop\fr\filereaderdll\modes\layout.h
+	"../Text/Text.h"
+	"../OutParams/OutParams.h"
+	"../Scroll/Scroll.h"
+
+1611484929 c:\users\acer\desktop\fr\res\readermenu.h
+

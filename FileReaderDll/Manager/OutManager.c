@@ -16,25 +16,15 @@ WINBOOL getNewFileName(HWND hwnd, PSTR OFNBuffer, int sizeOFNBuf)
 {
     OPENFILENAME ofn;
 
+    ZeroMemory(&ofn, sizeof(ofn));
+
     ofn.lStructSize = sizeof(ofn);
     ofn.hwndOwner = hwnd;
-    ofn.hInstance = NULL;
     ofn.lpstrFilter = "All Files\0*.TXT;*.C;*.H;*.CPP\0";
-    ofn.lpstrCustomFilter = NULL;
-    ofn.nMaxCustFilter = 0;
-    ofn.nFilterIndex = 0;
     ofn.lpstrFile = OFNBuffer;
     ofn.nMaxFile = sizeOFNBuf;
-    ofn.lpstrFileTitle = NULL;
-    ofn.lpstrInitialDir = NULL;
-    ofn.lpstrTitle = NULL;
     ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
-    ofn.nFileOffset = 0;
-    ofn.nFileExtension = 0;
     ofn.lpstrDefExt = "txt";
-    ofn.lCustData = 0L;
-    ofn.lpfnHook = NULL;
-    ofn.lpTemplateName = NULL;
 
         return GetOpenFileName(&ofn);
 }
