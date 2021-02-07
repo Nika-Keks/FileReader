@@ -61,8 +61,8 @@ void HSProcChangeMode(OUTPARAM* op, TEXT* text)
 */
 void HSProcChangeWSize(LPARAM lParam, OUTPARAM* op, TEXT* text)
 {
-    op->CAreaH = HIWORD(lParam);
-    op->CAreaW = LOWORD(lParam);
+    op->CAreaH = max(HIWORD(lParam), 1);
+    op->CAreaW = max(LOWORD(lParam), 1);
 
     op->iCurStr = max(0, min(op->iCurStr, op->nLines - nLineOnPage(*op)));
     op->iFirstSym = max(0, min(op->iFirstSym, op->nColums - nSymInLine(*op)));

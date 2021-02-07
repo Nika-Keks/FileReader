@@ -112,7 +112,7 @@
 1612632768 source:c:\users\acer\desktop\fr\filereaderdll\manager\outmanager.c
 	"OutManager.h"
 
-1611484928 source:c:\users\acer\desktop\fr\filereaderdll\modes\hscroll.c
+1612719868 source:c:\users\acer\desktop\fr\filereaderdll\modes\hscroll.c
 	"HScroll.h"
 
 1611484928 source:c:\users\acer\desktop\fr\filereaderdll\outparams\outparams.c
@@ -124,6 +124,6 @@
 1612710863 source:c:\users\acer\desktop\fr\filereaderdll\text\text.c
 	"Text.h"
 
-1612711560 source:c:\users\acer\desktop\fr\filereaderdll\modes\layout.c
+1612719843 source:c:\users\acer\desktop\fr\filereaderdll\modes\layout.c
 	"Layout.h"
 
