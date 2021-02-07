@@ -20,7 +20,7 @@ STR stepToEnd(TEXT text, OUTPARAM op, int lineOffset, int* iStr)
     STR substr = op.curSubStr;
     for (int i = 0; i < lineOffset; i++)
     {
-        if (lenSubstr(text, *iStr, substr) >= nSymInLine(op))
+        if (lenSubstr(text, *iStr, substr) > nSymInLine(op))
             substr += nSymInLine(op);
         else
         {
@@ -51,7 +51,7 @@ STR stepToBegin(TEXT text, OUTPARAM op, int lineOffset, int* iStr)
 {
     *iStr = op.iCurStr;
     STR substr = op.curSubStr;
-    for (int i = 0; i > lineOffset; i--)
+    for (int i = 0; i < -lineOffset; i++)
     {
         if (lenStr(text, *iStr) - lenSubstr(text, *iStr, substr) >= nSymInLine(op))
             substr -= nSymInLine(op);
@@ -62,9 +62,36 @@ STR stepToBegin(TEXT text, OUTPARAM op, int lineOffset, int* iStr)
             {
                 return NULL;
             }
-            substr = text.strings[*iStr] + (lenStr(text, *iStr) / nSymInLine(op)) * nSymInLine(op);
+            int shift = lenStr(text, *iStr) % nSymInLine(op) == 0 ? 1 : 0;
+            substr = text.strings[*iStr] + (lenStr(text, *iStr) / nSymInLine(op) - shift) * nSymInLine(op);
         }
     }
+    STR lastStr = op.curSubStr;
+    int lastIStr = op.iCurStr;
+    op.curSubStr = substr;
+    op.iCurStr = *iStr;
+    if (text.strings[op.iCurStr] <= op.curSubStr &&
+        op.curSubStr < text.strings[op.iCurStr] + lenStr(text, op.iCurStr))
+    {
+
+    }
+    else
+    {
+        printf("FATAL\n");
+        printf("shift = %i\n", lineOffset);
+        printf("last str = %p\n", lastStr);
+        printf("last i str = %i\n", lastIStr);
+        printf("%i - %i < %i\n", lenStr(text, *iStr), lenSubstr(text, *iStr, substr), nSymInLine(op));
+        int i = 0;
+        printf("%i\n", op.iCurStr);
+        printf("%p <= %p\n", text.strings[op.iCurStr], op.curSubStr);
+        printf("%p <  %p + %i = %p\n", op.curSubStr, text.strings[op.iCurStr], lenStr(text, op.iCurStr), text.strings[op.iCurStr] + lenStr(text, op.iCurStr));
+        while(text.strings[op.iCurStr][i] != '\n')
+            printf("%c", text.strings[op.iCurStr][i++]);
+        printf("\n");
+        substr = text.strings[*iStr];
+    }
+
     return substr;
 }
 
@@ -82,6 +109,16 @@ STR stepToBegin(TEXT text, OUTPARAM op, int lineOffset, int* iStr)
  */
 STR stepBackN(TEXT text, OUTPARAM op, int lineOffset, int* newIStr)
 {
+
+    if (text.strings[op.iCurStr] <= op.curSubStr &&
+        op.curSubStr < text.strings[op.iCurStr] + lenStr(text, op.iCurStr))
+    {
+
+    }
+    else if (lineOffset >= 0)
+    {
+        printf("FATAL_____________________\n");
+    }
     STR newSubstr = op.curSubStr;
     *newIStr = op.iCurStr;
     if (lineOffset > 0)
@@ -218,8 +255,8 @@ void LOScrollV(HWND hwnd, WPARAM wParam, OUTPARAM *op, TEXT* text)
             ScrollWindow(hwnd, 0, -scrollShift * op->CharH, NULL, NULL);
             op->curSubStr = curStr;
             op->iCurStr = iStr;
+            UpdateWindow (hwnd);
         }
-        UpdateWindow (hwnd);
     }
 }
 
@@ -236,13 +273,13 @@ void LOSetScrollParam(HWND hwnd, OUTPARAM op, TEXT text)
 {
     SCROLLINFO si;
     si.cbSize = sizeof(si);
-
     si.fMask = SIF_ALL;
     si.nMin = 0;
     si.nPage = nLineOnPage(op);
     si.nMax = max((op.nLines - 1), si.nPage);
     si.nPos = (int)nLinesBefor(text, op.nColums, op.curSubStr);
 
+    printf(" max - %i\n pos - %i\n", si.nMax, si.nPos);
     SetScrollInfo(hwnd, SB_VERT, &si, TRUE);
 
     EnableScrollBar(hwnd, SB_HORZ, ESB_DISABLE_BOTH);

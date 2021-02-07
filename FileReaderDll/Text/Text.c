@@ -113,7 +113,7 @@ unsigned int nLinesBefor(TEXT text, int nSymInLine, STR substr)
 
     for (int i = 0; i < text.NStr; i++)
     {
-        if (i < text.NStr && text.strings[i + 1] > substr)
+        if (i + 1 < text.NStr && text.strings[i] <= substr && substr < text.strings[i + 1])
         {
             NLine += (substr - text.strings[i]) / nSymInLine;
             NLine += (substr - text.strings[i]) % nSymInLine == 0 ? 0 : 1;
