@@ -264,4 +264,6 @@ void LOSetScrollParam(HWND hwnd, OUTPARAM op, TEXT text)
     EnableScrollBar(hwnd, SB_HORZ, ESB_DISABLE_BOTH);
     if (op.nLines <= nLineOnPage(op))
         EnableScrollBar(hwnd, SB_VERT, ESB_DISABLE_BOTH);
+    else
+        EnableScrollBar(hwnd, SB_VERT, ESB_ENABLE_BOTH);
 }
